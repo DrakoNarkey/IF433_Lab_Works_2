@@ -6,7 +6,7 @@ fun processCheckout(method: PaymentMethod, amount: Double) {
     method.pay(amount) //Dynamic polymorphism in action
 }
 
-fun main(){
+fun main() {
     val myWatch = Smartwatch()
     myWatch.showTime()
 
@@ -19,4 +19,9 @@ fun main(){
     println("\n=== TESTING CHECKOUT ===")
     processCheckout(method = pay1, amount = 50000.0)
     processCheckout(method = pay2, amount = 150000.0)
+
+    // --- TASK: SMART HOME SYSTEM ---
+    val lamp = SmartLamp("L1", "Ruang Tamu")
+    val speaker = SmartSpeaker("S1", "Google Nest Dapur")
+    val cctv = SmartCCTV("C1", "Ezviz Garasi")
 }
