@@ -14,4 +14,10 @@ fun main(){
     val reg2 = RegularUser("Alice", 22)
     println(reg1) // Prints unreadable memory hash
     println("Sama? ${reg1 == reg2}") // False (compares memory address)
+
+    println("\n=== TEST DATA CLASS ===")
+    val data1 = DataUser("Alice", 22)
+    val data2 = DataUser("Alice", 22)
+    println(data1) // Automatically readable format
+    println("Sama? ${data1 == data2}") // True (Structural Equality)
 }
