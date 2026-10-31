@@ -10,5 +10,15 @@ fun main() {
     )
 
     val parser = ApiParser()
-    println("Memproses ${rawApiData.size} data API...")
+
+    for (raw in rawApiData) {
+        try {
+            val product = parser.parseProduct(raw)
+            product?.let {
+                parser.checkout(it)
+            }
+        } catch (e: IllegalArgumentException) {
+            println("WARNING: ${e.message}")
+        }
+    }
 }
