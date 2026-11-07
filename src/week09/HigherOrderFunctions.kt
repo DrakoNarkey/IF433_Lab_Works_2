@@ -1,0 +1,10 @@
+package oop_140599_NathanaelEzraBudiman.week09
+
+fun main() {
+    val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8)
+    println("Original data: $numbers")
+    println("\n=== HOF:Filter ===")
+    //filter() membuat list baru berisi elemen yang memenuhi kondisi (true)
+    val evens = numbers.filter { it % 2 == 0 }
+    println("Evens only: $evens")
+}
